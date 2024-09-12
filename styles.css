@@ -1,0 +1,172 @@
+/* Import the Lobster font */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+/* Import the Roboto font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Global styles */
+body {
+    font-family: 'Roboto', sans-serif; /* Font for general text */
+    margin: 0;
+    padding: 0;
+    background-color: #cdcfc0; /* Background color */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    letter-spacing: 0.05em; /* Adjusted letter spacing */
+}
+
+.greeting {
+    font-family: 'Lobster', cursive; /* Fancy font for the greeting */
+    font-size: 1.5rem; /* Adjusted font size for the greeting */
+    color: #423f32; /* Dark color for the greeting */
+    margin-bottom: 15px; /* Adjusted space below the greeting */
+    text-align: center;
+    letter-spacing: 1px; /* Adjusted letter spacing for the greeting */
+    width: 100%; /* Full width for the greeting */
+    height: 40px; /* Adjusted height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    max-width: 1200px;
+    background-color: #f1ebe5; /* Container background color */
+    border-radius: 17px;
+    overflow: hidden;
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+.form-column {
+    padding: 15px; /* Padding for form columns */
+    box-sizing: border-box;
+}
+
+.form-column.left {
+    width: 30%;
+    background-color: #f1ebe5;  /* Lighter beige background */
+    border-right: 1px solid #423f32; /* Dark brown border */
+}
+
+.form-column.right {
+    width: 70%;
+    background-color: #f1ebe5; /* Light beige background */
+    overflow-y: auto;
+    max-height: calc(80vh - 40px);
+    display: flex;
+    flex-direction: column;
+}
+
+.form-column input[type="text"],
+.form-column select {
+    width: 100%;
+    padding: 12px 15px; /* Increased padding for better spacing */
+    margin-bottom: 12px; /* Increased margin for better spacing */
+    border: 1px solid #423f32; /* Dark brown border */
+    border-radius: 8px; /* More rounded corners */
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif; /* Font family for inputs and selects */
+    font-size: 16px; /* Font size */
+    letter-spacing: 0.5px; /* Adjusted letter spacing */
+    color: #333; /* Text color when entered */
+    background-color: #fff; /* White background for input fields */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition for focus effects */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.form-column input[type="text"]::placeholder,
+.form-column select::placeholder {
+    color: #aaa; /* Lighter placeholder color */
+    font-size: 0.85rem; /* Font size for placeholder */
+    line-height: 1.4; /* Line height for placeholder */
+    letter-spacing: 0.5px; /* Letter spacing for placeholder */
+}
+
+.form-column input[type="text"]:focus,
+.form-column select:focus {
+    border-color: #7a6d4f; /* Change border color on focus */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Enhanced shadow on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Custom styling for select options */
+.form-column select option {
+    font-family: 'Roboto', sans-serif; /* Font family for options */
+    font-size: 16px; /* Font size for options */
+    letter-spacing: 0.5px; /* Letter spacing for options */
+    color: #333; /* Text color for options */
+}
+
+.form-column input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #423f32; /* Dark brown */
+    color: white;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif; /* Font family for submit button */
+    font-size: 16px; /* Font size */
+    text-align: center;
+    letter-spacing: 0.5px; /* Adjusted letter spacing for submit button */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for submit button */
+}
+
+.form-column input[type="submit"]:hover {
+    background-color: #2f2c21; /* Darker shade of brown on hover */
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Center buttons horizontally */
+    gap: 10px; /* Space between buttons */
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 4px;
+    background-color: #423f32; /* Dark brown */
+    color: white;
+    font-family: 'Roboto', sans-serif; /* Font family for buttons */
+    font-size: 15px; /* Font size */
+    cursor: pointer;
+    text-align: center;
+    letter-spacing: 0.5px; /* Adjusted letter spacing for buttons */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for buttons */
+}
+
+button:hover {
+    background-color: #2f2c21; /* Darker shade of brown on hover */
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Form header styles */
+.form-header {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.form-header input[type="text"],
+.form-header select {
+    width: 100%;
+    padding: 10px;
+    border: 0.1px solid #252420; /* Dark brown border */
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif; /* Font family for form header inputs */
+    font-size: 16px; /* Font size */
+    letter-spacing: 0.5px; /* Adjusted letter spacing */
+}
